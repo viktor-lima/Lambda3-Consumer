@@ -6,6 +6,7 @@ import java.util.Locale;
 import java.util.function.Predicate;
 
 import entities.Product;
+import utils.UpdatePrice;
 
 public class Main {
 	public static void main(String[] args) {
@@ -19,7 +20,9 @@ public class Main {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
+		list.forEach(new UpdatePrice());
 		
+		list.forEach(System.out::println);
 		
 	}
 }
